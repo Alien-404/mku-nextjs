@@ -6,61 +6,19 @@
         "properties": {
           "condition" : "good",
           "location" : "kalipaten",
-          "data_sensors" : {
+          "data_result" : {
             "co2": 199,
             "humidity": 98,
             "pm10": 26,
             "temperature": 20
           },
-          "device_id": "VKmcfHXw2F"
+          "device_id_path": "VKmcfHXw2F" 
         },
         "geometry": {
           "type": "Point",
           "coordinates": [
             106.61155343055725,
             -6.228328554231906
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "condition" : "very unhealthy",
-          "location" : "Parkiran",
-          "data_sensors" : {
-            "co2": 142,
-            "humidity": 78,
-            "pm10": 183,
-            "temperature": 22
-          },
-          "device_id": "bn410OY803"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            106.61264777183533,
-            -6.229565751761379
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "condition" : "dangerous",
-          "location" : "Balai kota",
-          "data_sensors" : {
-            "co2": 175,
-            "humidity": 87,
-            "pm10": 351,
-            "temperature": 17
-          },
-          "device_id": "5Bk3BPAGpl"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            106.6102123260498,
-            -6.22968307206539
           ]
         }
       }

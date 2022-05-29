@@ -1,4 +1,3 @@
-import Layout from './layout';
 import {
   MapContainer,
   TileLayer,
@@ -17,7 +16,7 @@ export default function Maps({ geoData }) {
   return (
     <LayoutFooterNone title={'Airly | Map'}>
       <div className='relative'>
-        <MapContainer
+        {/* <MapContainer
           center={position}
           zoom={15}
           scrollWheelZoom={false}
@@ -53,7 +52,7 @@ export default function Maps({ geoData }) {
             );
           })}
         </MapContainer>
-        <Indicators />
+        <Indicators /> */}
       </div>
     </LayoutFooterNone>
   );
