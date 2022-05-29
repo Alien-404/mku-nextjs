@@ -22,6 +22,7 @@ export async function getStaticProps() {
       props: {
         devices,
       },
+      revalidate: 30, // In seconds
     };
   }
 }

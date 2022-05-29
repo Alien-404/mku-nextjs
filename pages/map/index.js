@@ -21,6 +21,7 @@ export async function getStaticProps() {
       props: {
         geoData,
       },
+      revalidate: 30, // In seconds
     };
   }
 }
