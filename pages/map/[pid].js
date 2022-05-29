@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import BannerHead from '../../components/partials/BannerHead';
 import Card from '../../components/partials/Card';
 import GrafikLine from '../../components/partials/GrafikLine';

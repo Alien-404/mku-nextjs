@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import ListView from '../components/partials/ListView';
 
 export default function device({ devices }) {
