@@ -4,9 +4,7 @@ import ListView from '../components/partials/ListView';
 export default function device({ devices }) {
   return (
     <Layout title={'Airly | Device'}>
-      <div className='w-full h-screen'>
-        <ListView listItem={devices} />
-      </div>
+      <ListView listItem={devices} />
     </Layout>
   );
 }
