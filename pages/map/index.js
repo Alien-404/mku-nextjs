@@ -10,17 +10,17 @@ function map() {
 
 export default map;
 
-// export async function getStaticProps() {
-//   const res = await fetch(`${process.env.HOST_NAME}/api/geojson`);
+export async function getStaticProps() {
+  const res = await fetch(`${process.env.HOST_NAME}/api/geojson`);
 
-//   if (res.status == 200) {
-//     const results = await res.json();
-//     const geoData = results.data;
+  if (res.status == 200) {
+    const results = await res.json();
+    const geoData = results.data;
 
-//     return {
-//       props: {
-//         geoData,
-//       },
-//     };
-//   }
-// }
+    return {
+      props: {
+        geoData,
+      },
+    };
+  }
+}
