@@ -1,55 +1,57 @@
 import Image from 'next/image';
+import BannerInformation from './BannerInformation';
 import BannerListItem from './BannerListItem';
 
-export default function BannerHead() {
+export default function BannerHead({ data_sensor, data_yesterday }) {
+  const { condition, data_result } = data_sensor;
   return (
     <div className='text-white border'>
-      <div className='container grid grid-cols-12 mx-auto bg-unhealthy'>
+      <div
+        className={`container grid grid-cols-12 mx-auto bg-${condition.replace(
+          / /g,
+          '_'
+        )}`}
+      >
         <div className='bg-no-repeat bg-cover mx-auto my-auto col-span-full md:col-span-4 lg:col-span-4'>
           <Image
-            src={'/icon/air_quality/dangerous.svg'}
+            src={`/icon/air_quality/${condition.replace(/ /g, '-')}.svg`}
             height={98}
             width={98}
             alt={'icons'}
           />
         </div>
-        <div className='flex flex-col p-6 col-span-full row-span-full md:col-span-8 lg:col-span-8 lg:p-10'>
-          <h1 className='text-3xl font-semibold'>Good Air Quality</h1>
-          <p className='flex-1 pt-2'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-            reprehenderit adipisci tempore voluptas laborum quod.
-          </p>
-        </div>
+        <BannerInformation condition={condition} />
       </div>
       <div className='py-2 px-4 text-slate-600 font-semibold'>
-        <h3 className='text-lg'>Overview</h3>
+        <h3 className='text-lg'>
+          Overview{' '}
+          <span className='text-xs italic text-slate-500'>
+            (comparison of today with yesterday)
+          </span>
+        </h3>
         <BannerListItem
           title={'PM10'}
-          value={90}
+          value={data_result.pm10}
           symbol={' µg/m³'}
-          icon={'up'}
-          iconColor={'red'}
+          compareData={data_yesterday.pm10}
         />
         <BannerListItem
           title={'CO2'}
-          value={210}
+          value={data_result.co2}
           symbol={' ppm'}
-          icon={'down'}
-          iconColor={'green'}
+          compareData={data_yesterday.co2}
         />
         <BannerListItem
           title={'Temperature'}
-          value={21}
+          value={data_result.temperature}
           symbol={'°C'}
-          icon={'up'}
-          iconColor={'red'}
+          compareData={data_yesterday.temperature}
         />
         <BannerListItem
           title={'Humidity'}
-          value={90}
+          value={data_result.humidity}
           symbol={'%'}
-          icon={'down'}
-          iconColor={'green'}
+          compareData={data_yesterday.humidity}
         />
       </div>
     </div>
