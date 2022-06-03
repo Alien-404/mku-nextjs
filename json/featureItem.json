@@ -1,0 +1,22 @@
+ [
+    {
+      "name": "PM10",
+      "icon": "pm10",
+      "desc": "sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut undeomnis iste natus."
+    },
+    {
+      "name": "CO2",
+      "icon": "co2",
+      "desc": "sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut undeomnis iste natus."
+    },
+    {
+      "name": "Temperature",
+      "icon": "temperature",
+      "desc": "sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut undeomnis iste natus."
+    },
+    {
+      "name": "Humidity",
+      "icon": "humidity",
+      "desc": "sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut undeomnis iste natus."
+    }
+  ]
