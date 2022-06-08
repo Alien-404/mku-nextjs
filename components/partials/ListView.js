@@ -10,8 +10,12 @@ export default function ListView({ listItem }) {
               Our list device deploy on street
             </h2>
             <p className='max-w-lg mt-8 text-gray-500'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur praesentium natus sapiente commodi. Aliquid sunt
+              Device is a combination of several sensors that are assembled in
+              such a concise manner that one device includes all the parameters
+              you want to monitor. This page contains a list of devices
+              scattered in the Kalipaten village area along with the status of
+              the device itself, whether it is active or not. Each device also
+              has a specific location description of each.
             </p>
           </div>
         </div>

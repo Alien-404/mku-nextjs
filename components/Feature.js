@@ -11,9 +11,10 @@ export default function Feature() {
             Sensors built into the device for air quality monitoring
           </h5>
           <p className='mb-6 text-gray-900'>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae. Sed ut unde
-            omnis iste natus.
+            Each device, there are several sensors stored for monitoring with
+            their respective functions. The sensors used in each device are
+            DHT22 for temperature and air, MQ135 to detect CO2 levels in the
+            air, and the last MQ7 to detect CO gas levels.
           </p>
           <div className='flex items-center'>
             <ButtonFill title={'Discover'} link={'/device'} />

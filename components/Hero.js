@@ -8,14 +8,17 @@ export default function Hero() {
         <div className='mb-2 lg:mb-0 lg:max-w-lg lg:pr-5'>
           <div className='max-w-xl mb-4'>
             <h2 className='font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none max-w-lg mb-6'>
-              Indonesia Air quality index monitoring report
+              Kalipaten Village Air Quality Index Monitoring Report
             </h2>
             <p className='text-gray-700 text-base md:text-lg'>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae. explicabo.
+              This website is an application that allows the measurement of
+              several air quality parameters such as PM10, CO2, humidity, and
+              temperature at several points in the Kalipaten village area. With
+              this application, it is hoped that the local community can use it
+              as a medium to determine the air quality in the area where they
+              live.
             </p>
-            <ButtonFill title={'Discover'} link={'/map'} />
+            <ButtonFill title={'Go to map'} link={'/map'} />
           </div>
         </div>
         <div className='flex items-center justify-center lg:w-1/2'>
