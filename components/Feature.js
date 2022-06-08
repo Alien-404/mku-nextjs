@@ -17,7 +17,7 @@ export default function Feature() {
             air, and the last MQ7 to detect CO gas levels.
           </p>
           <div className='flex items-center'>
-            <ButtonFill title={'Discover'} link={'/device'} />
+            <ButtonFill title={'Go to device'} link={'/device'} />
           </div>
         </div>
         <div className='grid gap-5 row-gap-5 sm:grid-cols-2'>
