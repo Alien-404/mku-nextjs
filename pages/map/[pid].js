@@ -14,7 +14,7 @@ export default function DetailDevice({
 }) {
   if (!data_sensor && !device) return <MapDetailSkeleton />;
   return (
-    <Layout title={'Airly | Detail Device'}>
+    <Layout title={'Detail Device | AirVision'}>
       <div className='px-8 py-6'>
         <h2 className='text-3xl font-bold pt-4'>
           Air quality in {_.capitalize(device.device_location_name)}

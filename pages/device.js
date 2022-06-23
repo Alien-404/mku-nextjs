@@ -3,7 +3,7 @@ import ListView from '../components/partials/ListView';
 
 export default function device({ devices }) {
   return (
-    <Layout title={'Airly | Device'}>
+    <Layout title={'Device | AirVision'}>
       <div className='h-fit lg:h-screen'>
         <ListView listItem={devices} />
       </div>

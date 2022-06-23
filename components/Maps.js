@@ -14,7 +14,7 @@ export default function Maps({ geoData }) {
   const position = [-6.228976732651597, 106.62777225140692];
 
   return (
-    <LayoutFooterNone title={'Airly | Map'}>
+    <LayoutFooterNone title={'Map | AirVision'}>
       <div className='relative'>
         <MapContainer
           center={position}

@@ -8,7 +8,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>404 Pages</title>
+        <title>404 Pages | AirVision</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <section className='px-4 py-24 mx-auto max-w-7xl'>

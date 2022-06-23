@@ -5,7 +5,7 @@ import Purpose from '../components/Purpose';
 
 export default function Home() {
   return (
-    <Layout title={'Airly | Overview'}>
+    <Layout title={'Overview | AirVision'}>
       <Hero />
       <Purpose />
       <Feature />
