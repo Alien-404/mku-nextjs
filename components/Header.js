@@ -11,7 +11,7 @@ export default function Header() {
           <div>
             <Link href={'/'}>
               <a className='uppercase font-semibold text-white text-xl'>
-                Airly
+                AirVision
               </a>
             </Link>
           </div>
