@@ -16,11 +16,11 @@ export default function DetailDevice({
   return (
     <Layout title={'Detail Device | AirVision'}>
       <div className='px-8 py-6'>
-        <h2 className='text-3xl font-bold pt-4'>
+        <h2 className='text-3xl font-semibold pt-4 font-sora'>
           Air quality in {_.capitalize(device.device_location_name)}
         </h2>
         <p className='pb-4 text-sm'>
-          <span className='font-semibold'>
+          <span className='font-medium font-manrope'>
             Last update at :{' '}
             {moment(data_sensor.created_at.seconds * 1000).format(
               'hh:mm a, MMMM dddd Do YYYY'

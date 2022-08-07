@@ -5,7 +5,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='bg-prime'>
+    <div className='bg-prime font-sora'>
       <div className='flex flex-col lg:flex-row'>
         <div className='flex items-center justify-between px-4 lg:px-8 py-4 lg:py-0 border-b lg:border-b-0'>
           <div>

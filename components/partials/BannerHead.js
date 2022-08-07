@@ -23,9 +23,9 @@ export default function BannerHead({ data_sensor, data_yesterday }) {
         <BannerInformation condition={condition} />
       </div>
       <div className='py-2 px-4 text-slate-600 font-semibold'>
-        <h3 className='text-lg'>
+        <h3 className='text-lg font-sora'>
           Overview{' '}
-          <span className='text-xs italic text-slate-500'>
+          <span className='text-xs italic text-slate-500 font-manrope'>
             (comparison of today with yesterday)
           </span>
         </h3>

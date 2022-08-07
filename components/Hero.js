@@ -7,10 +7,10 @@ export default function Hero() {
       <div className='flex flex-col items-center justify-between w-full mb-10 lg:flex-row'>
         <div className='mb-2 lg:mb-0 lg:max-w-lg lg:pr-5'>
           <div className='max-w-xl mb-4'>
-            <h2 className='font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none max-w-lg mb-6'>
+            <h2 className='text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none max-w-lg mb-6 font-manrope'>
               Kalipaten Village Air Quality Index Monitoring Report
             </h2>
-            <p className='text-gray-700 text-base md:text-lg'>
+            <p className='text-gray-800 text-sm font-light font-sora text-justify'>
               This website is an application that allows the measurement of
               several air quality parameters such as PM10, CO2, humidity, and
               temperature at several points in the Kalipaten village area. With

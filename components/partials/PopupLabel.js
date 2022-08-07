@@ -8,9 +8,11 @@ export default function PopupLabel({ dataDevice }) {
     dataDevice.properties;
 
   return (
-    <div className='max-w-md px-3 py-2 mx-auto rounded-lg text-slate-100 divide-y'>
+    <div className='max-w-md px-3 py-2 mx-auto rounded-lg text-slate-100 divide-y font-sora'>
       <div className='my-4 border-b-2'>
-        <h3 className='text-base my-2 text-slate-500'>{location}</h3>
+        <h3 className='text-base my-2 text-slate-700 font-medium'>
+          {location}
+        </h3>
       </div>
       <div
         className={`flex justify-between space-x-6 bg-${condition.replace(
@@ -26,11 +28,11 @@ export default function PopupLabel({ dataDevice }) {
             width={46}
           />
         </div>
-        <span className='font-bold text-base my-auto text-white'>
+        <span className='font-bold text-sm my-auto text-white'>
           {data_result.pm10} - {_.capitalize(condition)}
         </span>
       </div>
-      <div className='flex justify-between mt-8 space-x-4 text-slate-400'>
+      <div className='flex justify-between mt-8 space-x-4 text-slate-700'>
         <div className='flex flex-col items-center space-y-1'>
           <span className='uppercase'>CO2</span>
           <Image
@@ -39,7 +41,9 @@ export default function PopupLabel({ dataDevice }) {
             height={24}
             width={24}
           />
-          <span>{data_result.co2} ppm</span>
+          <span className='font-nunito text-slate-800'>
+            {data_result.co2} ppm
+          </span>
         </div>
         <div className='flex flex-col items-center space-y-1'>
           <span className='uppercase'>Temperature</span>
@@ -49,7 +53,9 @@ export default function PopupLabel({ dataDevice }) {
             height={24}
             width={24}
           />
-          <span>{data_result.temperature}°</span>
+          <span className='font-nunito text-slate-800'>
+            {data_result.temperature}°
+          </span>
         </div>
         <div className='flex flex-col items-center space-y-1'>
           <span className='uppercase'>Humidity</span>
@@ -59,11 +65,13 @@ export default function PopupLabel({ dataDevice }) {
             height={24}
             width={24}
           />
-          <span>{data_result.humidity}%</span>
+          <span className='font-nunito text-slate-800'>
+            {data_result.humidity}%
+          </span>
         </div>
       </div>
       <div className='my-4'>
-        <h3 className='text-xs my-2 text-slate-400'>
+        <h3 className='text-xs my-2 text-slate-900 font-manrope font-medium'>
           updated-at :{' '}
           <span className='tracking-tight'>
             {moment(created_at.seconds * 1000).format(
@@ -74,7 +82,7 @@ export default function PopupLabel({ dataDevice }) {
       </div>
       <div className='my-1 py-3'>
         <Link href={`/map/${device_id_path}`}>
-          <button className='px-8 py-3 font-semibold border rounded border-gray-400 text-prime w-full hover:bg-prime hover:text-secondary'>
+          <button className='px-8 py-3 font-bold border rounded border-gray-400 text-prime w-full hover:bg-prime hover:text-secondary'>
             more detail
           </button>
         </Link>

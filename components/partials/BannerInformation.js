@@ -1,7 +1,7 @@
 export default function BannerInformation({ condition }) {
   return (
-    <div className='flex flex-col p-6 col-span-full row-span-full md:col-span-8 lg:col-span-8 lg:p-10'>
-      <h1 className='text-3xl font-semibold'>
+    <div className='flex flex-col p-6 col-span-full row-span-full md:col-span-8 lg:col-span-8 lg:p-10 text-white'>
+      <h1 className='text-3xl font-semibold font-sora '>
         {
           {
             good: 'Clean Air!',
@@ -12,7 +12,7 @@ export default function BannerInformation({ condition }) {
           }[condition]
         }
       </h1>
-      <p className='flex-1 pt-2'>
+      <p className='flex-1 pt-2 font-manrope font-medium text-sm'>
         {
           {
             good: `Today's air is very good by all circles, you can go outside without fear of the air!`,

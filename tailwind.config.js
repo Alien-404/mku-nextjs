@@ -14,6 +14,11 @@ module.exports = {
         very_unhealthy: '#a070b6',
         dangerous: '#a06a7b',
       },
+      fontFamily: {
+        sora: 'Sora',
+        nunito: 'Nunito',
+        manrope: 'Manrope',
+      },
     },
   },
   plugins: [],

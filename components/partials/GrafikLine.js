@@ -38,14 +38,14 @@ export default function GrafikLine({ data_list }) {
 
   return (
     <div className='px-4 py-2 text-slate-600 my-3 shadow-sm rounded border'>
-      <h3 className='text-lg font-semibold pt-3'>History</h3>
-      <h4 className='text-base pb-4 font-medium text-slate-500'>
+      <h3 className='text-lg font-semibold pt-3 font-sora'>History</h3>
+      <h4 className='text-base pb-4 font-medium text-slate-500 font-manrope'>
         Air quality history graph
       </h4>
       {data_list.data.length > 2 ? (
         <Line data={data} options={options} />
       ) : (
-        <h4 className='text-center py-8 lg:py-24 text-lg lg:text-xl text-slate-700 italic'>
+        <h4 className='text-center py-8 lg:py-24 text-lg lg:text-xl text-slate-700 italic font-manrope'>
           Sorry the data not enough for display in the chart.
         </h4>
       )}

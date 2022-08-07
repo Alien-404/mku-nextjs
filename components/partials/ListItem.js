@@ -5,7 +5,9 @@ export default function ListItem({ item }) {
         <div className='flex flex-col flex-1 gap-4'>
           <div className='flex justify-between'>
             <div className='flex gap-1'>
-              <span className='text-2xl font-semibold'>{item.device_name}</span>
+              <span className='text-2xl font-semibold font-sora'>
+                {item.device_name}
+              </span>
             </div>
             <svg
               className='svg-icon h-12 w-12'
@@ -50,7 +52,9 @@ export default function ListItem({ item }) {
               d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'
             />
           </svg>
-          <span className='text-sm'>{item.device_location_name}</span>
+          <span className='text-sm font-nunito'>
+            {item.device_location_name}
+          </span>
         </div>
         <div className='flex items-center space-x-1'>
           <strong
@@ -58,7 +62,7 @@ export default function ListItem({ item }) {
               item.status == false
                 ? 'border-red-500 bg-red-500 border'
                 : 'border-green-500 bg-green-500 border'
-            } text-white uppercase px-2 py-1 rounded-md text-[10px] `}
+            } text-white uppercase px-2 py-1 rounded-md text-[10px] font-sora`}
           >
             {item.status == true ? 'Active' : 'Inactive'}
           </strong>

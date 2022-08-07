@@ -11,8 +11,12 @@ export default function FeatureList({ feautureItem }) {
           alt={'icon-sensors'}
         />
       </div>
-      <h6 className='mb-2 font-semibold leading-5'>{feautureItem.name}</h6>
-      <p className='text-sm text-gray-700'>{feautureItem.desc}</p>
+      <h6 className='mb-2 font-semibold leading-5 font-sora'>
+        {feautureItem.name}
+      </h6>
+      <p className='text-sm text-gray-700 font-nunito text-justify'>
+        {feautureItem.desc}
+      </p>
     </div>
   );
 }
