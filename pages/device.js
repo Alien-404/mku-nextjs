@@ -1,5 +1,5 @@
-import Layout from '../components/Layout';
-import ListView from '../components/partials/ListView';
+import Layout from '../src/components/Layout';
+import { ListView } from '../src/components/partials';
 
 export default function device({ devices }) {
   return (
@@ -22,7 +22,7 @@ export async function getStaticProps() {
       props: {
         devices,
       },
-      revalidate: 30, // In seconds
+      revalidate: 60, // In seconds
     };
   }
 }

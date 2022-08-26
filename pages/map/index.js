@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 
 function map({ geoData }) {
   const Map = dynamic(
-    () => import('../../components/Maps'), // replace '@components/map' with your component's location
+    () => import('../../src/components/Maps'), // replace '@components/map' with your component's location
     { ssr: false } // This line is important. It's what prevents server-side render
   );
   return <Map geoData={geoData} />;
@@ -21,7 +21,7 @@ export async function getStaticProps() {
       props: {
         geoData,
       },
-      revalidate: 30, // In seconds
+      revalidate: 60, // In seconds
     };
   }
 }

@@ -9,7 +9,7 @@ import {
 } from 'firebase/firestore';
 import moment from 'moment';
 import _ from 'lodash';
-import { db } from '../../../../config/firebase';
+import { db } from '../../../../src/config/firebase';
 
 export default async function handler(req, res) {
   const { deviceId, startDate, endDate } = req.query;

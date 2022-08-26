@@ -1,9 +1,7 @@
 import _ from 'lodash';
-import Layout from '../../components/Layout';
-import MapDetailSkeleton from '../../components/MapDetailSkeleton';
-import BannerHead from '../../components/partials/BannerHead';
-import Card from '../../components/partials/Card';
-import GrafikLine from '../../components/partials/GrafikLine';
+import Layout from '../../src/components/Layout';
+import { MapDetailSkeleton } from '../../src/components/';
+import { BannerHead, Card, GrafikLine } from '../../src/components/partials';
 import moment from 'moment';
 
 export default function DetailDevice({

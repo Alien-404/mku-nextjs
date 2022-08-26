@@ -1,7 +1,5 @@
-import Feature from '../components/Feature';
-import Hero from '../components/Hero';
-import Layout from '../components/Layout';
-import Purpose from '../components/Purpose';
+import { Hero, Purpose, Feature } from '../src/components/';
+import Layout from '../src/components/Layout';
 
 export default function Home() {
   return (

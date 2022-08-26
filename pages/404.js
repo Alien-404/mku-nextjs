@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React from 'react';
-import ButtonBorder from '../components/partials/ButtonBorder';
-import ButtonFill from '../components/partials/ButtonFill';
+import { ButtonBorder, ButtonFill } from '../src/components/partials/';
 
 export default function Custom404() {
   return (
@@ -17,10 +15,10 @@ export default function Custom404() {
             <p className='mb-2 text-xs font-semibold tracking-wide text-gray-500 uppercase'>
               Error 404
             </p>
-            <h1 className='mb-4 text-2xl font-extrabold leading-tight tracking-tight text-left text-gray-900 md:text-4xl'>
+            <h1 className='mb-4 text-2xl font-extrabold leading-tight tracking-tight text-left text-gray-900 md:text-4xl font-sora'>
               Oops! The page youre looking for isnt here.
             </h1>
-            <p className='mb-5 text-base text-left text-gray-800 md:text-xl'>
+            <p className='mb-5 text-base text-left text-gray-800 md:text-xl font-nunito'>
               You might have the wrong address, or the page may have moved.
             </p>
             <ButtonFill title={'Back to home'} />

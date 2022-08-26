@@ -1,5 +1,5 @@
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../../config/firebase';
+import { db } from '../../../src/config/firebase';
 
 export default async function handler(req, res) {
   let response = {
