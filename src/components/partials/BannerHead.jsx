@@ -30,16 +30,16 @@ export default function BannerHead({ data_sensor, data_yesterday }) {
           </span>
         </h3>
         <BannerListItem
-          title={'PM10'}
-          value={data_result.pm10}
-          symbol={' µg/m³'}
-          compareData={data_yesterday.pm10}
+          title={'IAQ'}
+          value={data_result.iaq}
+          symbol={' ppm'}
+          compareData={data_yesterday.iaq}
         />
         <BannerListItem
-          title={'CO2'}
-          value={data_result.co2}
-          symbol={' ppm'}
-          compareData={data_yesterday.co2}
+          title={'Pressure'}
+          value={data_result.pressure}
+          symbol={' KPa'}
+          compareData={data_yesterday.pressure}
         />
         <BannerListItem
           title={'Temperature'}

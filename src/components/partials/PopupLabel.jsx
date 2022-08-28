@@ -8,7 +8,7 @@ export default function PopupLabel({ dataDevice }) {
     dataDevice.properties;
 
   return (
-    <div className='max-w-md px-3 py-2 mx-auto rounded-lg text-slate-100 divide-y font-sora'>
+    <div className='max-w-md px-1 py-2 mx-auto rounded-lg text-slate-100 divide-y font-sora'>
       <div className='my-4 border-b-2'>
         <h3 className='text-base my-2 text-slate-700 font-medium'>
           {location}
@@ -29,27 +29,27 @@ export default function PopupLabel({ dataDevice }) {
           />
         </div>
         <span className='font-bold text-sm my-auto text-white'>
-          {data_result.pm10} - {_.capitalize(condition)}
+          {data_result.iaq} - {_.capitalize(condition)}
         </span>
       </div>
       <div className='flex justify-between mt-8 space-x-4 text-slate-700'>
         <div className='flex flex-col items-center space-y-1'>
-          <span className='uppercase'>CO2</span>
+          <span className='uppercase'>Pressure</span>
           <Image
-            src={'/icon/sensors/prime/co2.svg'}
-            alt='co2_icon'
+            src={'/icon/sensors/prime/pressure.svg'}
+            alt='pressure_icon'
             height={24}
             width={24}
           />
           <span className='font-nunito text-slate-800'>
-            {data_result.co2} ppm
+            {data_result.pressure} KPa
           </span>
         </div>
         <div className='flex flex-col items-center space-y-1'>
           <span className='uppercase'>Temperature</span>
           <Image
             src={'/icon/sensors/prime/temperature.svg'}
-            alt='co2_icon'
+            alt='temperature_icon'
             height={24}
             width={24}
           />
@@ -61,7 +61,7 @@ export default function PopupLabel({ dataDevice }) {
           <span className='uppercase'>Humidity</span>
           <Image
             src={'/icon/sensors/prime/humidity.svg'}
-            alt='co2_icon'
+            alt='humidity_icon'
             height={24}
             width={24}
           />
@@ -71,9 +71,9 @@ export default function PopupLabel({ dataDevice }) {
         </div>
       </div>
       <div className='my-4'>
-        <h3 className='text-xs my-2 text-slate-900 font-manrope font-medium'>
+        <h3 className='text-xs my-2 text-slate-900 font-manrope font-semibold'>
           updated-at :{' '}
-          <span className='tracking-tight'>
+          <span className='tracking-tight font-normal'>
             {moment(created_at.seconds * 1000).format(
               'hh:mm a, MMM dddd Do YYYY'
             )}

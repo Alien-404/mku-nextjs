@@ -87,10 +87,10 @@ export default async function handler(req, res) {
 
           // mean the data
           const results = {
-            pm10: Math.ceil(
-              _.meanBy(data_result['data_result'], (d) => d.pm10)
+            iaq: Math.ceil(_.meanBy(data_result['data_result'], (d) => d.iaq)),
+            pressure: Math.ceil(
+              _.meanBy(data_result['data_result'], (d) => d.pressure)
             ),
-            co2: Math.ceil(_.meanBy(data_result['data_result'], (d) => d.co2)),
             temperature: Math.ceil(
               _.meanBy(data_result['data_result'], (d) => d.temperature)
             ),
@@ -149,8 +149,8 @@ export default async function handler(req, res) {
         for (const [key, value] of Object.entries(results)) {
           response.data.push({
             [key]: {
-              pm10: Math.ceil(_.meanBy(value, 'pm10')),
-              co2: Math.ceil(_.meanBy(value, 'co2')),
+              iaq: Math.ceil(_.meanBy(value, 'iaq')),
+              pressure: Math.ceil(_.meanBy(value, 'pressure')),
               temperature: Math.ceil(_.meanBy(value, 'temperature')),
               humidity: Math.ceil(_.meanBy(value, 'humidity')),
             },

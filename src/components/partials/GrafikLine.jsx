@@ -21,7 +21,7 @@ export default function GrafikLine({ data_list }) {
   data_list.data.forEach((values, key) => {
     for (const [index, value] of Object.entries(values)) {
       dataLabels.push(index);
-      dataSets.push(value.pm10);
+      dataSets.push(value.iaq);
     }
   });
 
@@ -29,7 +29,7 @@ export default function GrafikLine({ data_list }) {
     labels: _.reverse(dataLabels),
     datasets: [
       {
-        label: 'PM10',
+        label: 'IAQ',
         lineTension: 0.5,
         data: _.reverse(dataSets),
       },
