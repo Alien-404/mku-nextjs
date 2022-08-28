@@ -1,7 +1,7 @@
 [
   {
-    "name": "Gas",
-    "icon": "gas",
+    "name": "IAQ",
+    "icon": "iaq",
     "desc": "The gas here is the result of monitoring several types of content in the air which is then processed based on resistance. The greater the concentration of harmful gasses contained in the air, the smaller the resulting number. Therefore, this parameter is very important to be observed as a benchmark for the Air Quality Index."
   },
   {
