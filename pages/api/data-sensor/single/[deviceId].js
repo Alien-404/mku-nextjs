@@ -7,9 +7,9 @@ import {
   query,
   where,
 } from 'firebase/firestore';
+import { db } from '../../../../src/config/firebase';
 import moment from 'moment';
 import 'moment/locale/id';
-import { db } from '../../../../src/config/firebase';
 
 export default async function handler(req, res) {
   const { deviceId } = req.query;
