@@ -160,7 +160,7 @@ export default async function handler(req, res) {
 
         // format time
         response.data.push({
-          date_time: moment(date_times).format('H:mm:ss, MMM dddd Do YYYY'),
+          date_time: moment(date_times).format('HH:mm:ss, MMM dddd Do YYYY'),
         });
 
         res.status(200).json(response);

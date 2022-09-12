@@ -40,7 +40,7 @@ export default async function handler(req, res) {
         response.data.push({
           ...d.data(),
           doc_id: d.id,
-          date_time: moment(date_times).format('H:mm:ss, MMM dddd Do YYYY'),
+          date_time: moment(date_times).format('HH:mm:ss, MMM dddd Do YYYY'),
         });
       });
       res.status(200).json(response);
