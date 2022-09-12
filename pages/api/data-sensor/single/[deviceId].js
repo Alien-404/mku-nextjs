@@ -40,14 +40,10 @@ export default async function handler(req, res) {
         response.data.push({
           ...d.data(),
           doc_id: d.id,
-          date_time: moment(date_times).format('HH:mm:ss, MMM dddd Do YYYY'),
+          date_time: moment(date_times + 25200).format(
+            'HH:mm:ss, MMM dddd Do YYYY'
+          ),
         });
-      });
-      const da = moment(1662967449 * 1000).format('HH:mm:ss');
-      const di = moment(1662967449).format('HH:mm:ss');
-      response.data.push({
-        da,
-        di,
       });
       res.status(200).json(response);
     }
