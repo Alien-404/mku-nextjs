@@ -7,6 +7,8 @@ import {
   query,
   where,
 } from 'firebase/firestore';
+import moment from 'moment';
+import 'moment/locale/id';
 import { db } from '../../../../src/config/firebase';
 
 export default async function handler(req, res) {
@@ -34,7 +36,12 @@ export default async function handler(req, res) {
       res.status(204).end();
     } else {
       querySnapshot.forEach((d) => {
-        response.data.push({ ...d.data(), doc_id: d.id });
+        const date_times = d.data().created_at.seconds * 1000;
+        response.data.push({
+          ...d.data(),
+          doc_id: d.id,
+          date_time: moment(date_times).format('H:mm:ss, MMM dddd Do YYYY'),
+        });
       });
       res.status(200).json(response);
     }

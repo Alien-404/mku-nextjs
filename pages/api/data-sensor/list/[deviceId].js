@@ -8,6 +8,7 @@ import {
   where,
 } from 'firebase/firestore';
 import moment from 'moment';
+import 'moment/locale/id';
 import _ from 'lodash';
 import { db } from '../../../../src/config/firebase';
 
@@ -156,6 +157,11 @@ export default async function handler(req, res) {
             },
           });
         }
+
+        // format time
+        response.data.push({
+          date_time: moment(date_times).format('H:mm:ss, MMM dddd Do YYYY'),
+        });
 
         res.status(200).json(response);
       }

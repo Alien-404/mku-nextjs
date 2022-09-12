@@ -2,14 +2,15 @@ import dynamic from 'next/dynamic';
 
 function map({ geoData }) {
   const Map = dynamic(
-    () => import('../../src/components/Maps'), // replace '@components/map' with your component's location
-    { ssr: false } // This line is important. It's what prevents server-side render
+    () => import('../../src/components/Maps'), //  '@components/map' location
+    { ssr: false } // It's what prevents server-side render
   );
   return <Map geoData={geoData} />;
 }
 
 export default map;
 
+// fetch data with staticProps
 export async function getStaticProps() {
   const res = await fetch(`${process.env.HOST_NAME}/api/geojson`);
 
