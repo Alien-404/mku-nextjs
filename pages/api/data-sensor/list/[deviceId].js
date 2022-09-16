@@ -7,7 +7,7 @@ import {
   query,
   where,
 } from 'firebase/firestore';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import 'moment/locale/id';
 import _ from 'lodash';
 import { db } from '../../../../src/config/firebase';
@@ -136,7 +136,13 @@ export default async function handler(req, res) {
         let dataListDate = [];
 
         querySnapshot.forEach((d) => {
-          dataListDate.push({ ...d.data(), doc_id: d.id });
+          dataListDate.push({
+            ...d.data(),
+            doc_id: d.id,
+            date_time: moment(d.data().created_at.seconds * 1000)
+              .tz('Asia/Jakarta')
+              .format('HH:mm:ss, MMM dddd Do YYYY'),
+          });
         });
 
         // grouping data by date
@@ -157,14 +163,6 @@ export default async function handler(req, res) {
             },
           });
         }
-
-        // format time
-        // test usa
-        response.data.push({
-          date_time: moment(date_times + 25200).format(
-            'HH:mm:ss, MMM dddd Do YYYY'
-          ),
-        });
 
         res.status(200).json(response);
       }

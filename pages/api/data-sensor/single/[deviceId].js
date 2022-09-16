@@ -8,7 +8,7 @@ import {
   where,
 } from 'firebase/firestore';
 import { db } from '../../../../src/config/firebase';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import 'moment/locale/id';
 
 export default async function handler(req, res) {
@@ -40,9 +40,9 @@ export default async function handler(req, res) {
         response.data.push({
           ...d.data(),
           doc_id: d.id,
-          date_time: moment(date_times + 25200).format(
-            'HH:mm:ss, MMM dddd Do YYYY'
-          ),
+          date_time: moment(date_times + 1000)
+            .tz('Asia/Jakarta')
+            .format('HH:mm:ss, MMM dddd Do YYYY'),
         });
       });
       res.status(200).json(response);

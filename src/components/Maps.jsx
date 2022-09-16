@@ -11,14 +11,14 @@ import { styleColor } from '../helpers/mapFunc';
 import LayoutFooterNone from './LayoutFooterNone';
 
 export default function Maps({ geoData }) {
-  const position = [-6.228976732651597, 106.62777225140692];
+  const position = [-6.2295931, 106.6291792];
 
   return (
     <LayoutFooterNone title={'Map | AirVision'}>
       <div className='relative'>
         <MapContainer
           center={position}
-          zoom={15}
+          zoom={18}
           scrollWheelZoom={false}
           className='w-full h-[calc(100vh-4rem)] z-0'
         >
